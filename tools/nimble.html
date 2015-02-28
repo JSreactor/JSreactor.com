@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<!-- Head BEGIN -->
+<head>
+  <meta charset="utf-8">
+  <title>Nimble | is one of the tiny functional JavaScript and async flow-control library</title>
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <meta content="Metronic Shop UI description" name="description">
+  <meta content="Metronic Shop UI keywords" name="keywords">
+  <meta content="keenthemes" name="author">
+
+  <meta property="og:site_name" content="-CUSTOMER VALUE-">
+  <meta property="og:title" content="-CUSTOMER VALUE-">
+  <meta property="og:description" content="-CUSTOMER VALUE-">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="-CUSTOMER VALUE-"><!-- link to image for socio -->
+  <meta property="og:url" content="-CUSTOMER VALUE-">
+
+  <link rel="shortcut icon" href="../img/logoIMG602.png">
+  <!-- Fonts START -->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Pathway+Gothic+One|PT+Sans+Narrow:400+700|Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css">
+  <!-- Fonts END -->
+  <!-- Global styles BEGIN -->
+  <link href="../global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../global/plugins/slider-revolution-slider/rs-plugin/css/settings.css" rel="stylesheet">
+  <!-- Global styles END -->
+  <!-- Page level plugin styles BEGIN -->
+  <link href="global/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet">
+  <!-- Page level plugin styles END -->
+  <!-- Theme styles BEGIN -->
+  <link href="../global/css/components.css" rel="stylesheet">
+  <link href="../frontend/onepage/css/style.css" rel="stylesheet">
+  <link href="../frontend/onepage/css/style-responsive.css" rel="stylesheet">
+  <link href="../frontend/onepage/css/themes/red.css" rel="stylesheet" id="style-color">
+  <link href="../frontend/onepage/css/custom.css" rel="stylesheet">
+  <!-- Theme styles END -->
+
+  <script type="text/javascript" src="../modules/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+  <script type="text/javascript" src="../modules/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+  <link type="text/css" rel="stylesheet" href="../modules/syntaxhighlighter_3.0.83/styles/shCoreDefault.css"/>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+<!--DOC: menu-always-on-top class to the body element to set menu on top -->
+<body class="menu-always-on-top">
+  <!-- Header BEGIN -->
+  <div class="header header-mobi-ext">
+    <div class="container">
+      <div class="row">
+        <!-- Logo BEGIN -->
+        <div class="col-md-2 col-sm-2">
+          <a class="scroll site-logo" href="#promo-block"><img src="../img/logoJSRmin.png" alt="JSreactor"></a>
+        </div>
+        <!-- Logo END -->
+        <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
+        <!-- Navigation BEGIN -->
+        <div class="col-md-10 pull-right">
+          <ul class="header-navigation">
+            <li><a href="#">Nimble</a></li>
+          </ul>
+        </div>
+        <!-- Navigation END -->
+      </div>
+    </div>
+  </div>
+  <!-- Header END -->
+
+  <!-- Tools block BEGIN -->
+  <div class="about-block content">
+    <div class="container">      
+      <h3>Owerview:</h3>
+      <p><strong>Nimble</strong> is one of the tiny functional JavaScript and async flow-control library</p>
+      <h3>Links:</h3>
+      <p>Description on the npm package manager site <a href="https://www.npmjs.com/package/nimble">https://www.npmjs.com/package/nimble</a><p>
+      <p>GitHub <a href="https://github.com/caolan/nimble">https://github.com/caolan/nimble</a><p>
+      <p>Example wiki <a href="http://caolan.github.io/nimble/">http://caolan.github.io/nimble/</a><p>
+      <h3>Install:</h3>
+      <pre class="brush: js;">
+        npm install nimble
+      </pre>
+      <h3>Articles:</h3>
+    <p>Virtual Panel: How to Survive Asynchronous Programming in JavaScript: <a href="http://www.infoq.com/articles/surviving-asynchronous-programming-in-javascript">En</a></p>
+      <h3>Example:</h3>
+      <p><strong>Before</strong></p>
+      <pre class="brush: js;">
+        setTimeout(function(){
+          console.log('I  execute first.');
+          setTimeout(function(){
+            console.log('I  execute next.');
+            setTimeout(function(){
+              console.log('I  execute last.');
+            },100);
+          },500);
+        },1000);
+      </pre>
+      <p><strong>After</strong></p>
+      <pre class="brush: js;">
+        var flow.series
+        
+        //Array in turn caused Nimble
+        flow.series([
+          function (callback) {
+            setTimeout(function(){
+              console.log('I  execute first.');
+              callback();
+            },1000);
+          },
+          function (callback) {
+            setTimeout(function(){
+              console.log('I  execute next.');
+              callback();
+            },500);
+          },
+          function (callback) {
+            setTimeout(function(){
+              console.log('I  execute last.');
+              callback();
+            },100);
+          }
+        ]);
+      </pre>      
+    
+  </div>
+</div>
+<!-- Tools block END -->
+
+<!-- BEGIN PRE-FOOTER -->
+<div class="pre-footer" id="contact">
+  <div class="container">
+    <div class="row">
+      <!-- BEGIN BOTTOM ABOUT BLOCK -->
+      <div class="col-md-4 col-sm-6 pre-footer-col">
+        <h2>About us</h2>
+        <p>Outsourcing product and application development company dedicated to empowering businesses worldwide by providing end-to-end capabilities from product concept to completion.</p>
+        <p>We are motivated and inspired to leverage advanced software technologies to your growth, strengthen your market position and exceed your customer's expectations.</p>
+      </div>
+      <!-- END BOTTOM ABOUT BLOCK -->
+      <!-- BEGIN TWITTER BLOCK --> 
+      <div class="col-md-4 col-sm-6 pre-footer-col">
+        <h2 class="margin-bottom-0">Latest Tweets</h2>
+        <a class="twitter-timeline" href="https://twitter.com/jsreactor" data-tweet-limit="2" data-theme="dark" data-link-color="#57C8EB" data-widget-id="565501283864694784" data-chrome="noheader nofooter noscrollbar noborders transparent">Loading tweets by @jsreactor...</a>      
+      </div>
+      <!-- END TWITTER BLOCK -->
+      <div class="col-md-4 col-sm-6 pre-footer-col">
+        <!-- BEGIN BOTTOM CONTACTS -->
+        <h2>Our Contacts</h2>
+        <address class="margin-bottom-20">
+          1, Turivska Street<br>
+          Kiev, Ukraine<br>
+          Phone: +380 50 976 91 55<br>
+          Fax: +380 44 230 87 50 <br>
+          Email: <a href="mailto:contact@jsreactor.com">contact@jsreactor.com</a><br>
+          Skype: <a href="skype:zosim.max">zosim.max</a>
+        </address>
+        <!-- END BOTTOM CONTACTS -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END PRE-FOOTER -->
+
+<!-- BEGIN FOOTER -->
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <!-- BEGIN COPYRIGHT -->
+      <div class="col-md-6 col-sm-6">
+        <div class="copyright">2014 © JSreactor</div>
+      </div>
+      <!-- END COPYRIGHT -->
+      <!-- BEGIN SOCIAL ICONS -->
+      <div class="col-md-6 col-sm-6 pull-right">
+        <ul class="social-icons">
+          <li><a class="facebook" data-original-title="facebook" href="https://www.facebook.com/pages/JSreactor/852644841461580"></a></li>
+          <li><a class="twitter" data-original-title="twitter" href="https://twitter.com/jsreactor"></a></li>
+        </ul>
+      </div>
+      <!-- END SOCIAL ICONS -->
+    </div>
+  </div>
+</div>
+<!-- END FOOTER -->
+
+<!-- Analytics js BEGIN -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59582512-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- Analytics js END -->
+</body>
+</html>
